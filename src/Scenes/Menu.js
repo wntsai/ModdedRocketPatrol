@@ -8,6 +8,7 @@ class Menu extends Phaser.Scene{
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
+        this.load.audio('background', './assets/runnermusic.mp3');
     }
 
     create(){
@@ -25,10 +26,11 @@ class Menu extends Phaser.Scene{
     }
 
     //show menu text
+    //menuConfig.backgroundColor = '#666699';
     this.add.text(game.config.width / 2, game.config.height / 2 - borderUISize - borderPadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
     this.add.text(game.config.width / 2, game.config.height / 2, 'Use Arrow Keys to move and (F) to fire', menuConfig).setOrigin(0.5);
-    menuConfig.backgroundColor = '#00FF00';
-    menuConfig.color = '#000';
+    //menuConfig.backgroundColor = '#666699';
+    //menuConfig.color = '#ffffff';
     this.add.text(game.config.width / 2, game.config.height / 2 + borderUISize + borderPadding, 'Press < for Novice or > for Expert', menuConfig).setOrigin(0.5);
     
     //define keys
